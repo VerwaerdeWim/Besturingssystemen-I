@@ -1,14 +1,15 @@
-# Hoe kun je een variabele instellen met een default waarde, enkel op voorwaarde dat die variabele
-# op dat ogenblik geen waarde heeft ?
+# You would like to supply a default value to a scalar variable, but only if it doesn’t already 
+# have one. It often happens that you want a hardcoded default value for a variable that can be 
+# overridden from the command line or through an environment variable. (1.2)
 
-$variabele1=""; # test verschillende waarden
-$parameter1 = $variabele1 || "default waarde";
-print $parameter1."\n";
+$a=""; # test verschillende waarden
+$b = $a || "default waarde";
+print "$b\n";
 
-$parameter2=""; # test verschillende waarden
-$parameter2 ||= "default waarde";
-print $parameter2."\n";
+$c=""; # test verschillende waarden
+$c ||= "default waarde";
+print "$c\n";
 
-$variabele3; # test verschillende waarden
-$parameter3 = defined($variabele3) ? $variabele3 : "default waarde";
-print $parameter3."\n";
+$d; # test verschillende waarden
+$d = defined($d) ? $d : "default waarde";
+print "$d\n";
