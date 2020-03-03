@@ -4,7 +4,7 @@
 @a = ("aap","beer","citroen","dans","eten","fazant");
 
 for (0 .. $#a){
-    print @a[$_];
+    print $a[$_];
     if($_ < $#a -1) {
         print ", ";
     } elsif ($_ != $#a) {

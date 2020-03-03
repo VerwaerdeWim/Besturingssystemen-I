@@ -8,4 +8,3 @@ print "$a $c\n";
 
 (undef,$b,undef,$d) = @a;
 print "$b $d\n";
-

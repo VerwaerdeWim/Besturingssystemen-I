@@ -10,6 +10,6 @@ $c=""; # test verschillende waarden
 $c ||= "default waarde";
 print "$c\n";
 
-$d; # test verschillende waarden
+$d=""; # test verschillende waarden
 $d = defined($d) ? $d : "default waarde";
 print "$d\n";
