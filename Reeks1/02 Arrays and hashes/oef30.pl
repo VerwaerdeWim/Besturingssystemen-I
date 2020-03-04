@@ -21,7 +21,7 @@ print "@union\n";
 print "@intersect\n";
 
 
-%union = %intersect = ();
+%union = %intersect = @union = @intersect = ();
 foreach $item(@a, @b){
     $union{$item}++ && $intersect{$item}++;
 }
@@ -30,3 +30,21 @@ foreach $item(@a, @b){
 print "@union\n";
 print "@intersect\n";
 
+
+%count = @union = @difference = @intersect = ();
+foreach $item(@a,@b){
+    $count{$item}++;
+}
+@union = sort keys %count;
+print "@union\n";
+foreach $item(sort keys %count){
+    if($count{$item} == 2){
+        push @intersect,$item;
+    } else {
+        push @difference,$item;
+    }
+}
+
+print "@union\n";
+print "@intersect\n";
+print "@difference\n";
